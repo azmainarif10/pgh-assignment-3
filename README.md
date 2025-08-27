@@ -8,7 +8,7 @@ Answer :  The above all are to select HTML element in Javascript.
  *  getElementsByClassname : If in a HTML there are some elements having the same class name to get all the elements having the same class name we use it .
 
  Returns a live HTMLCollection, which is an array-like object of all matching elements. It automatically updates if elements with that class are added or removed from the document.
-          ### Can't use for Loop.
+          ### Can't use forEach Loop.
   
  * querySelector : Uses CSS selectors to select elements.
         Returns the first element that matches the specified CSS selector

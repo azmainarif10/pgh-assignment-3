@@ -22,7 +22,7 @@ const callList = document.querySelector(".page")
 
     const time = new Date().toLocaleTimeString();
            onPage += 
-           `<div class=" mx-auto w-78 h-20 bg-gray-200 rounded-xl mb-4  flex items-center gap-7">
+           `<div class=" mx-auto w-78 md:w-1/2 lg:w-full h-20 bg-gray-200 rounded-xl mb-4  flex items-center justify-between px-4 ">
       <div class="ml-3"> 
          <p class="font-[Inter] font-semibold text-[16px] ">${serviceName}</p>
           <p class="font-[Hind Madurai] text-lg text-gray-500 ">${serviceNumber}</p>
@@ -32,7 +32,7 @@ const callList = document.querySelector(".page")
    callList.innerHTML = onPage;
       }
       else{
-        alert("You Don't have sufficient coin to make a call.")
+        alert("You don't have sufficient coin to make a call.")
        }
 
     })
