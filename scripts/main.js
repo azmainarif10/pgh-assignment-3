@@ -41,7 +41,67 @@ const callList = document.querySelector(".page")
 
   })
 
-  
+    const clear = document.querySelector(".btn-clear")
+      clear.addEventListener("click",function(){
+         
+        callList.innerHTML = "";
 
+      })
+
+    const  heartCount = document.getElementById("heart")
+      let numberCount = Number(heartCount.innerText)
     const heart = document.querySelectorAll(".heart-icon")
+  heart.forEach(function(btn){
     
+  btn.addEventListener("click",function(){
+       
+    numberCount += 1 ;
+    btn.classList.toggle("text-red-600")
+    heartCount.innerHTML = numberCount;
+  })
+
+  })
+   
+  const copy = document.getElementById("copy")
+  let copyCount = Number(copy.innerText);
+  let lastCoppiedNumber = "";
+  const allCopyBtn = document.querySelectorAll(".btn-cp")
+    
+     allCopyBtn.forEach(function(btnCp){
+
+      btnCp.addEventListener("click",function(){
+
+        allCopyBtn.forEach(function(bt){
+
+          bt.classList.remove("bg-blue-200")
+          bt.classList.add("bg-white")
+        })
+
+             
+
+      btnCp.classList.remove("bg-white")
+     btnCp.classList.add("bg-blue-200")
+
+
+const containerInfo = btnCp.closest(".container")
+ const copyNumber = containerInfo.querySelector(".number").textContent
+        
+       lastCoppiedNumber = copyNumber
+
+     navigator.clipboard.writeText(copyNumber)
+     .then(function(){
+        alert("Number" + " " +`${lastCoppiedNumber}`+ " "+ "Coppied!")
+             copyCount += 1;
+     copy.innerHTML = copyCount;
+       
+     btnCp.classList.remove("bg-blue-200")
+
+     })
+     .catch(function(err){
+      console.error("Number not coppied",err)
+     });
+
+      })
+
+
+     })
