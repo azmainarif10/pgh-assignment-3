@@ -45,6 +45,7 @@ const callList = document.querySelector(".page")
       clear.addEventListener("click",function(){
          
         callList.innerHTML = "";
+         onPage="";  
 
       })
 
