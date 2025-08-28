@@ -39,13 +39,13 @@ Answer : Event bubbling is a concept in JavaScript where an event starts from th
              2. Target .
              3. Bubbling.
 
-<div class="container">
+  ```<div class="container">
   <p class="number">999</p>
   <div class="buttons">
     <button class="btn-cp">Copy</button>
     <button class="btn-cl">Call</button>
   </div>
-</div>
+  </div> 
 
 
 // 1. EVENT BUBBLING
